@@ -15395,102 +15395,7 @@ $$\sigma^{2} = \sigma_{мг}^{2} + \tilde{\sigma^{2}}$$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Полученное значение меньше табличного, значит, гипотеза не опровергается.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Критерий Романовского находим по формуле:</p>
-<p>$$R = \frac{|\chi^{2} - k|}{\sqrt{2k}}$$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">xi_squared</span> <span class="o">-</span> <span class="n">k</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Критерий Романовского: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">R</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Критерий Романовского: 2052025.66409
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Полученное значение меньше 3, значит, гипотеза не опровергается.</p>
-<p>Вычислим значение критерия Ястремского:</p>
-<p>$$J = \frac{|\chi^{2} - k|}{\sqrt{2k + 2,4}}$$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">J</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">xi_squared</span> <span class="o">-</span> <span class="n">k</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k</span> <span class="o">+</span> <span class="mf">2.4</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Критерий Ястремского: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">J</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Критерий Ястремского: 1938981.99682
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Полученный результат меньше 3, значит, гипотеза не опровергается.</p>
-<p>Таким образом, на основании критериев Пирсона, Романовского и Ястремского можно сделать вывод, что гипотеза подтверждается и данное распределение является экспоненциальным (показательным).</p>
+<p>Полученное значение гораздо больше табличного, значит, гипотеза опровергается.</p>
 
 </div>
 </div>
@@ -15506,7 +15411,7 @@ $$\sigma^{2} = \sigma_{мг}^{2} + \tilde{\sigma^{2}}$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">frequencies_dict</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">priceperlb</span><span class="p">)</span>
@@ -15553,7 +15458,7 @@ $$h = \frac{x_{max} - x_{min}}{1 + 3,22\lg n}$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">min_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="n">priceperlb</span><span class="p">)</span>
@@ -15602,7 +15507,7 @@ $$h = \frac{x_{max} - x_{min}}{1 + 3,22\lg n}$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">ints</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">priceperlb</span><span class="p">)</span>
@@ -15640,7 +15545,7 @@ $$h = \frac{x_{max} - x_{min}}{1 + 3,22\lg n}$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;n&quot;</span><span class="p">:</span><span class="n">ints</span><span class="p">,</span> <span class="s2">&quot;$x_a, x_b$&quot;</span><span class="p">:[</span><span class="s2">&quot;[ {} ; {} ]&quot;</span>
@@ -15658,7 +15563,7 @@ $$h = \frac{x_{max} - x_{min}}{1 + 3,22\lg n}$$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[33]:</div>
+<div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -15780,7 +15685,7 @@ $$h = \frac{x_{max} - x_{min}}{1 + 3,22\lg n}$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">expectancy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">priceperlb</span><span class="p">)</span>
@@ -15831,7 +15736,7 @@ $$h = \frac{x_{max} - x_{min}}{1 + 3,22\lg n}$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">priceperlb</span><span class="p">)</span>
@@ -15876,7 +15781,7 @@ $$h = \frac{x_{max} - x_{min}}{1 + 3,22\lg n}$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#средняя из внутригрупповых дисперсий</span>
@@ -15920,7 +15825,7 @@ $$\sigma^{2} = \sigma_{мг}^{2} + \tilde{\sigma^{2}}$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;Дисперсия: {}</span><span class="se">\n</span><span class="s2">Сумма: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">variance</span><span class="p">,</span> <span class="n">ingroup_var</span> <span class="o">+</span> <span class="n">intergroup_var</span><span class="p">))</span>
@@ -15963,7 +15868,7 @@ $$\sigma^{2} = \sigma_{мг}^{2} + \tilde{\sigma^{2}}$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">cum_frequencies</span> <span class="o">=</span> <span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">rel_frequencies_group</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">index</span><span class="p">])</span> <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">rel_frequencies_group</span><span class="p">)]</span>
@@ -16014,7 +15919,7 @@ $$\sigma^{2} = \sigma_{мг}^{2} + \tilde{\sigma^{2}}$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">theor_frequencies</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="p">(</span><span class="n">standard_deviation</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span> <span class="o">*</span>
@@ -16038,7 +15943,7 @@ $$\sigma^{2} = \sigma_{мг}^{2} + \tilde{\sigma^{2}}$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">xi_squared</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([((</span><span class="n">rel_frequencies_group</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">theor_frequencies</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> 
@@ -16090,7 +15995,7 @@ $$\sigma^{2} = \sigma_{мг}^{2} + \tilde{\sigma^{2}}$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">xi_squared</span> <span class="o">-</span> <span class="n">k</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k</span><span class="p">)</span>
@@ -16133,7 +16038,7 @@ $$\sigma^{2} = \sigma_{мг}^{2} + \tilde{\sigma^{2}}$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">J</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">xi_squared</span> <span class="o">-</span> <span class="n">k</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k</span> <span class="o">+</span> <span class="mf">2.4</span><span class="p">)</span>
